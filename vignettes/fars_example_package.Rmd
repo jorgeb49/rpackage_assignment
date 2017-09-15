@@ -1,0 +1,32 @@
+---
+title: "Vignette Example for fars package"
+author: "Jorge Barrera"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+The fars package allows for quering accident report data 
+
+## Fars Info
+
+Fars implement several functions for accesing accident reports.
+
+## Output functions
+
+The `fars` package offers (exports) to the user the following functions:
+    
+    rpackage.assignment::fars_read_years
+    rpackage.assignment::fars_summarize_years
+    rpackage.assignment::fars_map_state
+    rpackage.assignment::fars_map_state
+  
+## Examples
+
+```{r, echo=TRUE,eval=FALSE}
+library('rpackage.assignment')
+head(fars_summarize_years(c(2013,2014)), 10)
+```
