@@ -9,6 +9,17 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+
+```{r setup, echo=TRUE, include=TRUE}
+library(rpackage.assignment)
+library(dplyr)
+library(readr)
+library(tidyr)
+library(maps)
+library(magrittr)
+library(devtools)
+```
+
 The fars package allows for quering accident report data 
 
 ## Fars Info
@@ -26,7 +37,8 @@ The `fars` package offers (exports) to the user the following functions:
   
 ## Examples
 
-```{r, echo=TRUE,eval=FALSE}
-library('rpackage.assignment')
-head(fars_summarize_years(c(2013,2014)), 10)
+
+```{r readSimple}
+filename <- system.file("extdata/accident_2013.csv.bz2", package = "fars")
+fars_read(filename)
 ```
